@@ -59,4 +59,4 @@ def django_cleanpyc(use_sudo=False):
     """
     func = use_sudo and sudo or run
     with in_project():
-        func("find . -name '*.pyc' -delete")
+        func("find . -type f -name '*.py[co]' -delete")
